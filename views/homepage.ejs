@@ -5,9 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
+    <script src="https://use.fontawesome.com/35e0e0136a.js"></script>
     <link rel="stylesheet" href="css/homepage.css">
 </head>
 <body>
-    
+
+    <div class="main">
+        <ul class="topbar">
+
+            <div class="left_topbar">
+                <li class="topbar_item title">MARKET<span style='color:#E63946;'>PLACE</span></li>
+                <li class="topbar_item search" >
+                    <input type="text" id="searchBar" class="search_bar" placeholder="Search for a product">
+                    <i class="fa fa-search search_icon"></i>
+                </li>
+            </div>
+
+            <div class="right_topbar">
+                <li class="topbar_item account"><i class="fa fa-user"></i>Account</li>
+                <li class="topbar_item favorites"><i class="fa fa-heart"></i>Favorites</li>
+                <li class="topbar_item cart"><i class="fa fa-shopping-cart"></i><i class="fa fa-circle"></i>Cart</li>
+            </div>
+        </ul>
+
+        <div class="categories_section">
+            <li class="category_item">Phones</li>
+            <li class="category_item">Phones</li>
+            <li class="category_item">Phones</li>
+            <li class="category_item">Phones</li>
+            <li class="category_item">Phones</li>
+            <li class="category_item">Phones</li>
+            <li class="category_item">Phones</li>
+            <li class="category_item">Phones</li>
+            <li class="category_item">Phones</li>
+            <li class="category_item">Phones</li>
+            <li class="category_item">Phones</li>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script>
+        tippy('#searchBar', {
+            arrow:false,
+            trigger: 'click',
+            delay: 0,
+            interactive:true,
+            touch:'true',
+            allowHTML: true,
+            theme:'customTheme',
+            maxWidth:1000,
+            content: 'My tooltip!<br>My tooltip!<br>My tooltip!'
+      });
+    </script>
 </body>
 </html>

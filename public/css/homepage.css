@@ -3,3 +3,129 @@ body{
     padding:0;
     margin:0;
 }
+
+@font-face {
+    font-family: mainFontVarela;
+    src: url('../Fonts/Varela-Regular.ttf');
+}
+
+
+.main{
+    position: relative;
+    width:100%;
+    max-width:1500px;
+    height:500px;
+    margin:0 auto;
+    font-family: mainFontVarela;
+}
+
+
+/* Topbar */
+
+.topbar{
+    position: relative;
+    list-style-type: none;
+    width:100%;
+    height:auto;
+    margin:0;
+    padding:0;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.topbar li{
+    display: inline-block;
+}
+
+.topbar .title{
+    font-size:36px;
+    font-weight: bold;
+    color: #1D3557;
+}
+
+.topbar .search{
+    display: inline-flex;
+    position: absolute;
+    top:7px;
+    
+}
+
+.search_bar{
+    height:30px;
+    border: 2px solid #1D3557;
+    width:400px;
+    margin-left:20px;
+    border-radius:17px;
+    padding: 0 20px;
+    outline:none;
+}
+
+.search_icon{
+    margin-left: -30px;
+    margin-top:9px;
+    font-size:14px;
+    opacity: 0.5;
+}
+
+.search_bar:focus + .search_icon{
+    opacity: 1;
+}
+
+.tippy-box[data-theme~='customTheme'] {
+    background-color: white;
+    border: 1px solid #1D3557;
+    color: #457B9D;
+    font-size:16px;
+    border-radius: 16px;
+    width:426px;
+    padding:10px;
+  }
+
+.right_topbar{
+    font-size:24px;
+    color:#1D3557;
+    margin-top:8px;
+}
+
+.right_topbar .topbar_item{
+    margin-left:20px;
+}
+.right_topbar .topbar_item i{
+    margin-right:10px;
+}
+
+.fa-circle{
+    position: absolute;
+    right:45px;
+    top:11px;
+    color:red;
+    font-size:10px;
+}
+
+
+
+/* Categories */
+
+.categories_section{
+    width: 100%;
+    background-color:#1D3557;
+    color:white;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.categories_section li{
+    list-style-type: none;
+    display: inline-block;
+    width:100%;
+    padding:10px;
+    margin:0 auto;
+    cursor: pointer;
+    text-align: center;
+}
+
+.categories_section li:hover{
+    background-color: #457B9D;
+}
