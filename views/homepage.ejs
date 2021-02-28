@@ -12,8 +12,8 @@
 
     <div class="main">
         <ul class="topbar">
-
             <div class="left_topbar">
+                <li class="topbar_item hamburger_icon"><i class="fa fa-bars"></i></li>
                 <li class="topbar_item title">MARKET<span style='color:#E63946;'>PLACE</span></li>
                 <li class="topbar_item search" >
                     <input type="text" id="searchBar" class="search_bar" placeholder="Search for a product">
@@ -22,11 +22,16 @@
             </div>
 
             <div class="right_topbar">
-                <li class="topbar_item account"><i class="fa fa-user"></i>Account</li>
-                <li class="topbar_item favorites"><i class="fa fa-heart"></i>Favorites</li>
-                <li class="topbar_item cart"><i class="fa fa-shopping-cart"></i><i class="fa fa-circle"></i>Cart</li>
+                <li class="topbar_item account"><i class="fa fa-user"></i><span class="topbar_text">Account</span></li>
+                <li class="topbar_item favorites"><i class="fa fa-heart"></i><span class="topbar_text">Favorites</span></li>
+                <li class="topbar_item cart"><i class="fa fa-shopping-cart"></i><i class="fa fa-circle"></i><span class="topbar_text">Cart</span></li>
             </div>
         </ul>
+
+        <div class="mobile_searchbar">
+            <input type="text" id="searchBar" class="search_bar" placeholder="Search for a product">
+            <i class="fa fa-search search_icon"></i>
+        </div>
 
         <div class="categories_section">
             <li class="category_item">Phones</li>

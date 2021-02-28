@@ -29,6 +29,7 @@ body{
     height:auto;
     margin:0;
     padding:0;
+    margin-top:2px;
 
     display: flex;
     justify-content: space-between;
@@ -36,6 +37,15 @@ body{
 
 .topbar li{
     display: inline-block;
+}
+
+.left_topbar{
+    position: relative;
+    margin-left:5px;
+}
+
+.right_topbar{
+    margin-right:5px;
 }
 
 .topbar .title{
@@ -82,6 +92,24 @@ body{
     padding:10px;
   }
 
+.mobile_searchbar{
+    position: relative;
+    display: none;
+    height:auto;
+    width:98%;
+    margin:0 auto;
+}
+
+.mobile_searchbar .search_bar{
+    width:100%;
+    margin-left:0;
+}
+
+.mobile_searchbar .search_icon{
+    position: absolute;
+    right:2%;
+}
+
 .right_topbar{
     font-size:24px;
     color:#1D3557;
@@ -103,11 +131,83 @@ body{
     font-size:10px;
 }
 
+.topbar .hamburger_icon{
+    font-size:36px;
+    display:none;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .search_bar{
+        width:250px;
+    }
+
+    .tippy-box[data-theme~='customTheme'] {
+        width:270px;
+      }
+  }
+
+@media only screen and (max-width: 1000px) {
+    .right_topbar .topbar_item .topbar_text{
+        display: none;
+    }
+
+    .fa-circle{
+        position: absolute;
+        right:-1px;
+        top:11px;
+        color:red;
+        font-size:10px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .topbar_item .search_bar,.topbar_item .search_icon{
+        display: none;
+    }
+
+    .mobile_searchbar{
+        display: flex;
+    }
+
+    .topbar .hamburger_icon{
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .topbar .title{
+        font-size:24px;
+    }
+    .topbar .hamburger_icon{
+        font-size:24px;
+    }
+    .right_topbar .fa-user, .fa-heart, .fa-shopping-cart{
+        font-size:16px;
+       
+    }
+    .right_topbar .topbar_item{
+        margin-left:0;
+    }
+    .right_topbar .topbar_item i{
+        margin-right:5px;
+    }
+
+    .fa-circle{
+        top:8px;
+        font-size:9px;
+    }
+    .right_topbar{
+        margin-top:0px;
+    }
+}
 
 
 /* Categories */
 
 .categories_section{
+    display: block;
     width: 100%;
     background-color:#1D3557;
     color:white;
@@ -128,4 +228,10 @@ body{
 
 .categories_section li:hover{
     background-color: #457B9D;
+}
+
+@media only screen and (max-width: 900px) {
+    .categories_section{
+        display: none;
+    }
 }
