@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <script src="https://use.fontawesome.com/35e0e0136a.js"></script>
+    <link rel="stylesheet" href="splide-2.4.21/dist/css/splide.min.css">
     <link rel="stylesheet" href="css/homepage.css">
+    
 </head>
 <body>
 
@@ -28,6 +30,19 @@
             </div>
         </ul>
 
+        <div class="mobile_menu">
+            <li class="category_item_mobile">Phone</li>
+            <li class="category_item_mobile">Phone</li>
+            <li class="category_item_mobile">Phone</li>
+            <li class="category_item_mobile">Phone</li>
+            <li class="category_item_mobile">Phone</li>
+            <li class="category_item_mobile">Phone</li>
+            <li class="category_item_mobile">Phone</li>
+            <li class="category_item_mobile">Phone</li>
+            <li class="category_item_mobile">Phone</li>
+            <li class="category_item_mobile">Phone</li>
+        </div>
+
         <div class="mobile_searchbar">
             <input type="text" id="searchBar" class="search_bar" placeholder="Search for a product">
             <i class="fa fa-search search_icon"></i>
@@ -47,17 +62,42 @@
             <li class="category_item">Phones</li>
         </div>
 
+        <div class="image_shocase">
+            <div class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide" >
+                            <img src="/images/showcase_image1.jpg">
+                        </li>
+                        <li class="splide__slide">Slide 02</li>
+                        <li class="splide__slide">Slide 03</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
     </div>
 
-
-
-
-
-
-
+    <script src="./splide-2.4.21/dist/js/splide.min.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
     <script>
+
+        // Events
+        document.querySelector('.hamburger_icon').addEventListener('click',() => {
+            if(document.querySelector('.mobile_menu').style.display == 'block')
+                document.querySelector('.mobile_menu').style.display = 'none';
+            else
+                document.querySelector('.mobile_menu').style.display = 'block';
+        })
+
+        //Splide
+        new Splide( '.splide' ).mount();
+
+
+        // Search Bar recent searches 
         tippy('#searchBar', {
             arrow:false,
             trigger: 'click',
@@ -67,7 +107,10 @@
             allowHTML: true,
             theme:'customTheme',
             maxWidth:1000,
-            content: 'My tooltip!<br>My tooltip!<br>My tooltip!'
+            content: '<ul class="search_recent">\
+                <li><span>Recent Search</span><span>x</span></li>\
+                <li><span>Recent Search</span><span>x</span></li>\
+                    <ul>'
       });
     </script>
 </body>

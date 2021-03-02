@@ -87,9 +87,9 @@ body{
     border: 1px solid #1D3557;
     color: #457B9D;
     font-size:16px;
-    border-radius: 16px;
+    border-radius: 6px;
     width:426px;
-    padding:10px;
+    padding:5px;
   }
 
 .mobile_searchbar{
@@ -103,12 +103,30 @@ body{
 .mobile_searchbar .search_bar{
     width:100%;
     margin-left:0;
+    border: 1px solid #1D3557;
 }
 
 .mobile_searchbar .search_icon{
     position: absolute;
     right:2%;
 }
+
+.search_recent{
+    list-style: none;
+    margin:0 auto;
+    padding:0;
+}
+
+.search_recent li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.search_recent li span{
+    cursor:pointer;
+}
+
+
 
 .right_topbar{
     font-size:24px;
@@ -136,6 +154,28 @@ body{
     display:none;
 }
 
+.mobile_menu{
+    height:auto;
+    width:100%;
+    background-color:#1D3557;
+    overflow: hidden;
+    list-style: none;
+    color:white;
+    display: none;
+    margin-bottom:5px;
+    font-size: 16px;
+}
+
+.mobile_menu li{
+    margin-left:35px;
+}
+
+.mobile_menu li:nth-child(1){
+    margin-top:10px;
+}
+.mobile_menu li:last-child{
+    margin-bottom:10px;
+}
 
 
 @media only screen and (max-width: 1200px) {
